@@ -1,0 +1,27 @@
+.image-preview-window {
+  position: absolute;
+  right: 125px;
+  bottom: 65px;
+  left: 15px;
+  top: 15px;
+  display: block;
+  width: auto;
+  text-align: center;
+
+  img {
+    height: 100%;
+    max-width: 100%;
+    transition-duration: .3s;
+    transition-property: transform;
+
+    &.direct-up {
+      transform: rotate(90deg);
+    }
+    &.direct-right {
+      transform: rotate(180deg);
+    }
+    &.direct-down {
+      transform: rotate(270deg);
+    }
+  }
+}

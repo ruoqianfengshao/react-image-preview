@@ -1,0 +1,30 @@
+.preview-menu {
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  right: 110px;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: auto;
+  height: 50px;
+  margin-left: 0;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+
+  .operation {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    height: 50px;
+  }
+
+  .image-operation {
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+  }
+}

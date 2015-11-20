@@ -1,0 +1,6 @@
+vendor/
+public/
+.sass-cache/
+.DS_Store
+stdout
+

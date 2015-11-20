@@ -1,0 +1,49 @@
+paths:
+  public: "public"
+groups:
+  scripts:
+    paths:
+      - app/scripts
+      - app/src
+    concat:
+      "/scripts/image-preview-jquery.js": "app/src/jquery/**/*.{js,coffee}"
+      "/scripts/image-preview-react.js": "app/src/react/**/*.{js,coffee,es6,jsx}"
+      "/scripts/vendor.js": "vendor/**/*.{js,coffee}"
+    order:
+      - ...
+      - app/src/react/app.jsx
+  styles:
+    paths:
+      - app/src
+      - app/styles
+    concat:
+      "/styles/image-preview-react.css": "{app/src/react/**/[a-z]*.{css,scss,sass},app/styles/**/*.{css,scss,sass}}"
+      "/styles/image-preview-jquery.css": "app/src/jquery/**/[a-z]*.{css,scss,sass}"
+  images:
+    paths:
+      - app/images
+    sprite:
+      "../app/images/icons.scss": "app/images/**/*.png"
+  views:
+    paths:
+      - app/views
+    copy:
+      "/": "app/views/**/*.html"
+modules:
+  wrapper: cmd
+  ignored: vendor/**/*
+  definition: /scripts/image-preview-react.js
+sprites:
+  path: /images/
+  selector: .icon-
+notification: true
+environments:
+  production:
+    revision:
+      manifest: "manifest.yml"
+      files:
+        - index.html
+bundles:
+  react.js:
+    version: 0.12.1
+    url: http://fb.me/react-with-addons-0.12.1.js

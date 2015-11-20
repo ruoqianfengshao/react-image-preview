@@ -1,0 +1,40 @@
+.image-preview-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  display: block;
+  width: 110px;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #0a0a0a;
+  box-shadow: 0 0 18px rgba(0,0,0,0.6);
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .image-li {
+    display: block;
+    padding: 5px 15px;
+    opacity: 0.6;
+    text-align: center;
+
+    &.select {
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 80px;
+  }
+
+}

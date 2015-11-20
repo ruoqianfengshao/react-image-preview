@@ -1,0 +1,17 @@
+@import "icons";
+
+.image-preview {
+  z-index: 999;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.icon-* {
+  display: inline-block;
+  font-size: 24px;
+  vertical-align: baseline;
+}
