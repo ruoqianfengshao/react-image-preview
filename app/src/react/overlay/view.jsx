@@ -1,18 +1,12 @@
-export class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {count: props.initialCount};
-  }
-  tick() {
-    this.setState({count: this.state.count + 1});
-  }
-  render() {
+let {div} = React.DOM;
+
+const Overlay = React.createClass({
+
+  render () {
     return (
-      <div onClick={this.tick.bind(this)}>
-        Clicks: {this.state.count}
-      </div>
+      <div className="preview-overlay"></div>
     );
   }
-}
-Counter.propTypes = { initialCount: React.PropTypes.number };
-Counter.defaultProps = { initialCount: 0 };
+});
+
+module.exports = React.createFactory(Overlay)
